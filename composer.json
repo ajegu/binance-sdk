@@ -1,0 +1,28 @@
+{
+    "name": "ajegu/binance-sdk",
+    "description": "A PHP SDK for Binance API",
+    "type": "library",
+    "autoload": {
+        "psr-4": {
+            "Ajegu\\BinanceSdk\\": "src/"
+        }
+    },
+    "require": {
+        "php": "^8.0",
+        "jane-php/open-api-runtime": "^6.3"
+    },
+    "require-dev": {
+        "jane-php/open-api-3": "^6.3",
+        "friendsofphp/php-cs-fixer": "^2.18"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Allan JEGU",
+            "email": "allanjegu@gmail.com"
+        }
+    ],
+    "scripts": {
+        "generate": "jane-openapi generate && rm -rf gen/"
+    }
+}

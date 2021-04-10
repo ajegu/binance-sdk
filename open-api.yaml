@@ -1,0 +1,45 @@
+openapi: 3.0.3
+info:
+  title: Binance spot API
+  contact:
+    name: Allan JEGU
+    email: allanjegu@gmail.com
+  license:
+    name: MIT
+    url: 'https://opensource.org/licenses/MIT'
+  version: 1.0.0
+servers:
+  - url: 'https://api.binance.com/api/v3/'
+    description: Binance API v3
+tags:
+  - name: ticker
+paths:
+  /ticker/bookTicker:
+    get:
+      tags:
+        - ticker
+      operationId: getBookTicker
+      parameters:
+        - in: query
+          name: symbol
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/bookTickerResponse'
+components:
+  schemas:
+    bookTickerResponse:
+      type: object
+      properties:
+        symbol:
+          type: string
+        bidPrice:
+          type: string
+        askPrice:
+          type: string

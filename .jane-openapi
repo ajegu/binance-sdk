@@ -1,0 +1,9 @@
+<?php
+
+return [
+    'openapi-file' => __DIR__ . '/open-api.yaml',
+    'namespace' => 'Ajegu\BinanceSdk',
+    'directory' => __DIR__ . '/src',
+    'use-fixer' => true,
+    'throw-unexpected-status-code' => true
+];
